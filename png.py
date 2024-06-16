@@ -1,12 +1,12 @@
-"""JPG => PNG"""
-# "E:/testimage/jpg_44-2.jpg.png"
+"""PNG"""
+
 from PIL import Image
 
-way = input(str("Input absolute way to JPG file: "))
+way = input(str("Input absolute way to file: "))
 png_convert = ".png"
 
 
-def jpg_png():
+def png():
     try:
         with Image.open(way) as img:
             img.load()
@@ -14,7 +14,7 @@ def jpg_png():
         img.save(way[:-4] + png_convert)
         print('Completed successfully!')
     except:
-        print('Problems with way to file')
+        print('Problems with way to file or this file is in selected format.')
 
 
-jpg_png()
+png()
